@@ -255,4 +255,10 @@ header{
 
 /*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
-@media screen and (prefers-reduced-motion: reduce) { }
+@media screen and (prefers-reduced-motion: reduce) {
+  #logo{
+    /*Your code here.*/
+    animation: none;
+    /* align-self: center; */
+ }
+ }
