@@ -91,8 +91,6 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /*flex: 1;*/
-
   
 }
 
@@ -236,7 +234,25 @@ header{
   }
   /*Your code here again.*/
   /*You will want four selectors*/  
+  body{
+    background-image: none;
+  }
+
+  .pricing{
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  #gallery {
+    display: none;
+  }
+
 }
 
 /*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
+@media screen and (prefers-reduced-motion: reduce) { }
