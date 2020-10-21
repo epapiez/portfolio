@@ -87,11 +87,11 @@ footer{
     /*Your code here.*/
     /*Don't forget to vertically and horizontally alight the card*/
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  
+    vertical-align: top;
 }
 
 .card {
@@ -102,7 +102,7 @@ footer{
   /*Your code here.*/
   /*Take a look at flex-basis*/
   width: 400px;
-  flex-basis: auto;
+  flex: 1 400px;
 
 }
 
@@ -198,8 +198,10 @@ header{
   /* Cards! */
 
   .card {
-    /*Your  code here again.*/
+    /*Your code here again.*/
     flex-basis: 225px;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 
   .card_big{
@@ -241,6 +243,7 @@ header{
   .pricing{
     justify-content: flex-start;
     flex-direction: row;
+    vertical-align: top;
   }
 
   .gallery {
@@ -259,6 +262,5 @@ header{
   #logo{
     /*Your code here.*/
     animation: none;
-    /* align-self: center; */
  }
  }
