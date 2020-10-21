@@ -90,8 +90,7 @@ footer{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    vertical-align: top;
+    /* vertical-align: top; */
 }
 
 .card {
@@ -101,8 +100,7 @@ footer{
   padding: 0 0 50px 0;
   /*Your code here.*/
   /*Take a look at flex-basis*/
-  width: 400px;
-  flex: 1 400px;
+  flex-basis: 400px;
 
 }
 
@@ -201,7 +199,6 @@ header{
     /*Your code here again.*/
     flex-basis: 225px;
     flex-wrap: wrap;
-    flex-direction: row;
   }
 
   .card_big{
@@ -241,9 +238,9 @@ header{
   }
 
   .pricing{
-    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: row;
-    vertical-align: top;
+
   }
 
   .gallery {
