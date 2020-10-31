@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <title>Home</title>
+  </head>
+  <body>
+  <header>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html" class='active-page'>Home</a>
+      <a href="about.html" class='inactive-page'>About</a>
+      <a href="work.html" class='inactive-page'>Work</a>
+      <a href="resume.html" class='inactive-page'>Resume</a>
+      <a href="contact.html" class='inactive-page'>Contact</a>
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
+    <h1 class="name_title">ewelina papiez</h1>
+    <div id="main">
+      <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        </div>
+    </div>
+    <a class = "skip" href="#skip">Skip to Main Content</a>
+  </header>
+  <div class="card_contain">
+    <h1 class = "hello"> hi, i'm ev.</h1>
+    <h1 class = "welcome"> welcome to my piece of the internet.</h1>
+    <div class = "picture">
+      <img src="images/profilepic.jpg" alt="Profile picture"/>
+    </div>
+
+  </div>
+  <main class="about" id="skip" tabindex="0">
+
+      </main>
+
+    <!-- <footer>
+      <p>University of Michigan School of Information <br/>
+        &copy; Colleen van Lent, Drew Asselin - Web Design 2019-2020</p>
+    </footer> -->
+  </body>
+</html>

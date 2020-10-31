@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="work.html">Work</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html" class='active-page'>Contact</a>
+        </div>
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+          }
+          </script>
+        <h1 class="name_title">ewelina papiez</h1>
+        <div id="main">
+            <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        </div>
+        <a class = "skip" href="#skip">Skip to Main Content</a>
+      </header>
+  <main class="about" id="skip" tabindex="0">
+  <div class = "form"> 
+    <h4 class="form_fill">Please fill out the form below to get in touch with me. I look forward to your message!</h2>
+    <form action="https://formspree.io/f/mayljern" method="POST"> 
+    <div>
+      <input type="text" name="_replyto" placeholder="Your email..">
+    </div>
+    <div>
+      <textarea name="message" placeholder="Your message.."></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+  </div>
+  <div class="contact">
+    <h4>Alternatively, you can find me...</h4>
+    <h6></br>on <a href="https://www.linkedin.com/in/ewelinapapiez/">LinkedIn</a></h6>
+    <h6>on <a href = "https://github.com/epapiez">GitHub</a></h6>
+    <h6>at epapiez@umich.edu</h6>
+  </div>
+      </main>
+
+    <!-- <footer>
+      <p>University of Michigan School of Information <br/>
+        &copy; Colleen van Lent, Drew Asselin - Web Design 2019-2020</p>
+    </footer> -->
+  </body>
+</html>

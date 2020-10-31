@@ -1,9 +1,9 @@
 body{
-  font-family: 'Raleway', sans-serif; /* Test for this*/
+  font-family: 'Quantico', sans-serif; /* Test for this*/
   margin: 0;
   padding: 0;
   font-size: 16pt; /* test for this! Make all sizes em or rem */
-  background-image: url('../images/concrete_seamless.png');
+  background-color: aliceblue;
 }
 
 h1{
@@ -20,6 +20,63 @@ h2{
 
 p {
   padding: 0 30px;
+}
+
+header{
+  background: #fff;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name_title {
+  font-size: 1em;
+  order: 1;
+}
+
+.active-page{
+  background-color:aliceblue;
+  text-transform: uppercase;
+  color: black;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  order: -1;
+  align-items: flex-end;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  text-transform: uppercase;
+}
+
+.sidenav a:active {
+  color: #f1f1f1;
+  text-transform: uppercase;
+}
+
+.main {
+  transition: margin-left .5s;
+  padding: 16px;
 }
 
 a.skip{
@@ -39,6 +96,169 @@ a.skip:focus{
   text-decoration-style: solid;
 }
 
+/* Home Page */
+.card_contain {
+  display: grid;
+  grid-template-columns: 4fr 1.5fr 3fr 1fr .5fr;
+  grid-template-rows: 1% auto auto auto auto;
+  grid-row-gap: 15px;
+}
+
+
+.hello {
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+}
+
+.welcome {
+  text-align: right;
+  grid-column: 2 / span 1;
+  grid-row: 9 / span 2;
+  font-size: smaller;
+}
+
+.picture {
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 2;
+  width: fit-content;
+  height: auto;
+  border: 5px solid black;
+  padding: 2em;
+}
+
+/* About Page */
+.about_contain {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+
+}
+
+.about_image {
+  border-image: 5px solid black;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1em;
+}
+
+.about_title {
+  font-size: 2em;
+}
+
+/* Resume Page */
+.resume_contain {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr 3fr 3fr 1fr;
+  grid-template-rows: 1% auto auto auto auto auto auto auto auto auto auto 6%;
+  grid-row-gap: 15px;
+}
+
+.resume_title {
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  font-size: 2em;
+}
+
+.education_subtitle {
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  font-size: 1.5em;
+}
+
+.education_info {
+  color: #818181;
+  text-align: left;
+  grid-column: 2 / span 3;
+  grid-row: 4 / span 1;
+  font-size: 1em;
+  margin-bottom: 4%;
+}
+
+.skills_subtitle {
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+  font-size: 1.5em;
+}
+
+.skills_info {
+  color: #818181;
+  text-align: left;
+  grid-column: 2 / span 3;
+  grid-row: 6 / span 1;
+  font-size: 1em;
+  margin-bottom: 4%;
+}
+
+.experience_subtitle {
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+  font-size: 1.5em;
+}
+
+.experience_info {
+  color: #818181;
+  text-align: left;
+  grid-column: 2 / span 3;
+  grid-row: 8 / span 1;
+  font-size: 1em;
+  margin-bottom: 4%;
+}
+
+.leadership_subtitle {
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 9 / span 1;
+  font-size: 1.5em;
+}
+
+.leadership_info {
+  color: #818181;
+  text-align: left;
+  grid-column: 2 / span 3;
+  grid-row: 10 / span 1;
+  font-size: 1em;
+  margin-bottom: 2%;
+}
+/* 
+Contact page */
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-top: 40px;
+  border-radius: 5px;
+  background-color:white;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-top: 40px;
+  border-radius: 5px;
+  background-color:white;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.form_fill{
+  padding-bottom: 3%;
+  text-align: center;
+}
+
 *:focus{
   border: 2px solid black;
 }
@@ -50,8 +270,6 @@ footer{
   text-align: center;
 }
 
-/*Begin your code here*/
-/*Keyframes for animation*/
 
 @-webkit-keyframes logo_wiggle{
   /*Your code here.*/
@@ -81,150 +299,116 @@ footer{
    align-self: center;
 }
 
-/* Cards! */
-.pricing{
-    min-height: 500px;
-    /*Your code here.*/
-    /*Don't forget to vertically and horizontally alight the card*/
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    /* vertical-align: top; */
-}
-
-.card {
-  margin: 12px;
-  background: #fff;
-  border-radius: 7px;
-  padding: 0 0 50px 0;
-  /*Your code here.*/
-  /*Take a look at flex-basis*/
-  flex-basis: 400px;
-
-}
-
-.card > header{
-  background: #288080;
-  border: 2px solid #45ADAD;
-  padding: 20px 0;
-  border-radius: 7px 7px 0 0;
-  justify-content: center;
-}
-
-.card > ul{
-  list-style: none;
-  padding: 0;
-}
-
-.card > ul li {
-  width: 90%;
-  margin: 20px auto;
-}
-
-.card button{
-  width: 90%;
-  height: 40px;
-  border: 0;
-  margin-left: 12px;
-  border-radius: 7px;
-  background: #288080;
-  color: white;
-  font-size: 1em;
-}
-
-.card h3{
-  font-size: 4em;
-  color: white;
-  text-align: center;
-}
-
-.card_big{
-  -webkit-transform: initial;
-          transform: initial;
-}
-
-/* Gallery! */
-.gallery{
-  min-height: 600px;
-  /*Your code here again.*/
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.gallery > img{
-  border: 10px #50C7C7 solid;
-  margin: 10px;
-  width: 300px;
-}
-
-/* Navbar */
-header{
-  background: #fff;
-  border-bottom: 3px solid #50C7C7;
-  /*Your  code here again.*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav_links{
-  /*Your code here again.*/
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.nav_item a{
-  color: black;
-  text-decoration: none;
-}
-
-.nav_item a:hover, a:focus{
-  color: #50C7C7;
-  text-decoration: underline;
-  -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
-}
 
 @media screen and (min-width: 850px){
 
-  /* Cards! */
-
-  .card {
-    /*Your code here again.*/
-    flex-basis: 225px;
-    flex-wrap: wrap;
-  }
-
-  .card_big{
-    -webkit-transform: scaleX(1.12);
-            transform: scaleX(1.12);
-  }
 
   /* Navbar */
-  header{
-    /*Your code here again.*/
+  .picture {
+    grid-column: 3 / span 1;
+    grid-row: 7 / span 2;
+    width: fit-content;
+    height: auto;
+    border: 5px solid black;
+    padding: 2em;
+  }
+
+  .hello{
+    grid-row: 7 / span 2;
+  }
+  
+  .welcome {
+    text-align: right;
+    grid-column: 3 / span 1;
+    grid-row: 9 / span 2;
+    font-size: smaller;
+  }
+  
+  .education_subtitle {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    font-size: 1.5em;
+  }
+  
+  .education_info {
+    color: #818181;
+    text-align: left;
+    grid-column: 2 / span 3;
+    grid-row: 4 / span 1;
+    font-size: 1em;
+    margin-bottom: 4%;
+  }
+  
+  .skills_subtitle {
+    text-align: left;
+    grid-column: 5 / span 1;
+    grid-row: 3 / span 1;
+    font-size: 1.5em;
+  }
+  
+  .skills_info {
+    color: #818181;
+    text-align: left;
+    grid-column: 5 / span 3;
+    grid-row: 4 / span 1;
+    font-size: 1em;
+    margin-bottom: 4%;
+    margin-right: 20%;
+  }
+  
+  .experience_subtitle {
+    text-align: left;
+    grid-column: 2 / span 1;
+    grid-row: 7 / span 1;
+    font-size: 1.5em;
+  }
+  
+  .experience_info {
+    color: #818181;
+    text-align: left;
+    grid-column: 2 / span 3;
+    grid-row: 8 / span 1;
+    font-size: 1em;
+    margin-bottom: 4%;
+  }
+  
+  .leadership_subtitle {
+    text-align: left;
+    grid-column: 5 / span 1;
+    grid-row: 7 / span 1;
+    font-size: 1.5em;
+  }
+  
+  .leadership_info {
+    color: #818181;
+    text-align: left;
+    grid-column: 5 / span 3;
+    grid-row: 8 / span 1;
+    font-size: 1em;
+    margin-bottom: 2%;
+    margin-right: 20%;
+  }
+
+  .about_contain {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
-    
-
+    align-content: center;
+    align-items: center;
+  
+  }
+  
+  .about_image {
+    border-image: 5px solid black;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1em;
+  }
+  
+  .about_title {
+    font-size: 2em;
+    padding-right: 20%;
   }
 
-  .nav_links{
-    /*Your code here again.*/  
-    justify-content: end;
-    flex-direction: row;
-  }
-
-  .nav_item a{
-    padding: 10px;
-  }
 }
 
 @media print { 

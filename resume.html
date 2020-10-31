@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <title>Resume</title>
+  </head>
+  <body>
+    <header>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="work.html">Work</a>
+          <a href="resume.html" class='active-page'>Resume</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+          }
+          </script>
+        <h1 class="name_title">ewelina papiez</h1>
+        <div id="main">
+          <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <a class = "skip" href="#skip">Skip to Main Content</a>
+      </header>
+      <div class="resume_contain">
+        <h1 class = "resume_title">resume</h1>
+        <div class = "education_subtitle">education</div>
+        <div class = "education_info"><b>University of Michigan School of Information</b>
+          <br/> Bachelor of Science in Information
+          <br/> Focus in Information Analysis
+          <br/> Class of 2022
+        </div>
+        <div class = "skills_subtitle">skills</div>
+        <div class = "skills_info">
+          C++, Python, Git, GitHub, Angular, HTML, SQL/XML, rST, R, MATLAB, Adobe Photoshop, Adobe Illustrator
+        </div>
+        <div class = "experience_subtitle">experience</div>
+        <div class = "experience_info"><b>University of Michigan School of Information</b>
+          <br/> Data-Oriented Programming Instructional Aide
+          <br/> 
+          <br/> <b>Quicken Loans</b>
+          <br/> Software Engineering Intern
+          <br/> 
+          <br/> <b>University of Michigan School of Information</b>
+          <br/> Research Assistant
+          <br/> 
+          <br/> <b>Quicken Loans</b>
+          <br/> Special Projects Intern
+        </div> 
+        <div class = "leadership_subtitle">leadership</div>
+        <div class = "leadership_info"><b>Panhellenic Association</b>
+          <br/> Vice President of Internal Affairs/Executive Board
+          <br/> 
+          <br/> <b>Kappa Delta Sorority</b>
+          <br/> Panhellenic Delegate/Executive Board
+          <br/> 
+          <br/> <b>Mosher-Jordan Hall Council</b>
+          <br/> President
+        </div>
+        
+        
+
+      </div>
+  <main class="about" id="skip" tabindex="0">
+
+      </main>
+
+    <!-- <footer>
+      <p>University of Michigan School of Information <br/>
+        &copy; Colleen van Lent, Drew Asselin - Web Design 2019-2020</p>
+    </footer> -->
+  </body>
+</html>
