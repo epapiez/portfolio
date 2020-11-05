@@ -196,7 +196,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 .louisview_img {
@@ -206,7 +206,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 .recupable {
@@ -216,7 +216,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 .internship_img {
@@ -226,7 +226,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 .linglong_img {
@@ -236,7 +236,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 .blueocean_img {
@@ -246,7 +246,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 .facebook_img {
@@ -256,7 +256,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 .blueocean_img {
@@ -266,7 +266,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 .eecs183_img {
@@ -276,7 +276,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 .eecs183_img_vid {
@@ -286,7 +286,7 @@ a.skip:focus{
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
-  color: #818181;
+  color: #696969;
 }
 
 
@@ -313,7 +313,7 @@ a.skip:focus{
 }
 
 .education_info {
-  color: #818181;
+  color: #696969;
   text-align: left;
   grid-column: 2 / span 3;
   grid-row: 4 / span 1;
@@ -330,7 +330,7 @@ a.skip:focus{
 }
 
 .skills_info {
-  color: #818181;
+  color: #696969;
   text-align: left;
   grid-column: 2 / span 3;
   grid-row: 6 / span 1;
@@ -347,7 +347,7 @@ a.skip:focus{
 }
 
 .experience_info {
-  color: #818181;
+  color: #696969;
   text-align: left;
   grid-column: 2 / span 3;
   grid-row: 8 / span 1;
@@ -364,7 +364,7 @@ a.skip:focus{
 }
 
 .leadership_info {
-  color: #818181;
+  color: #696969;
   text-align: left;
   grid-column: 2 / span 3;
   grid-row: 10 / span 1;
@@ -467,7 +467,7 @@ footer{
   }
   
   .education_info {
-    color: #818181;
+    color: #696969;
     text-align: left;
     grid-column: 3 / span 3;
     grid-row: 4 / span 1;
@@ -485,7 +485,7 @@ footer{
   }
   
   .skills_info {
-    color: #818181;
+    color: #696969;
     text-align: left;
     grid-column: 4 / span 3;
     grid-row: 4 / span 1;
@@ -504,7 +504,7 @@ footer{
   }
   
   .experience_info {
-    color: #818181;
+    color: #696969;
     text-align: left;
     grid-column: 3 / span 3;
     grid-row: 8 / span 1;
@@ -522,7 +522,7 @@ footer{
   }
   
   .leadership_info {
-    color: #818181;
+    color: #696969;
     text-align: left;
     grid-column: 4 / span 3;
     grid-row: 8 / span 1;
