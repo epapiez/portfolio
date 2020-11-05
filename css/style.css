@@ -4,6 +4,7 @@ body{
   padding: 0;
   font-size: 16pt; /* test for this! Make all sizes em or rem */
   background-color: aliceblue;
+  min-height: 100%;
 }
 
 h1{
@@ -18,8 +19,24 @@ h2{
   padding: 5px;
 }
 
+figcaption {
+  font-family: 'Open Sans', sans-serif;
+}
+
+b{
+  font-family: 'Quantico', sans-serif;
+  color: #111;
+  font-size: large;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
 p {
   padding: 0 30px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 header{
@@ -81,7 +98,7 @@ header{
 
 a.skip{
   background: white;
-  left: 0;
+  right: 0;
   padding: 6px;
   position: absolute;
   top: -40px;
@@ -103,6 +120,7 @@ a.skip:focus{
   grid-template-rows: 1% auto auto auto auto;
   grid-row-gap: 15px;
 }
+
 
 
 .hello {
@@ -131,21 +149,146 @@ a.skip:focus{
 .about_contain {
   display: flex;
   flex-direction: column;
-  align-content: center;
   align-items: center;
+}
 
+.about_stretch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about_text_stretch {
+  max-width: 400px;
 }
 
 .about_image {
-  border-image: 5px solid black;
+  border: 5px solid black;
   max-width: 100%;
   height: auto;
   margin-top: 1em;
+  align-self: center;
 }
 
 .about_title {
   font-size: 2em;
 }
+
+/* Work page */
+.work_contain {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 1fr auto auto auto auto auto auto auto auto auto auto 5%;
+  grid-row-gap: 15px;
+}
+
+.resize {
+  width: 100%;
+  height: auto;
+  border: 5px solid black;
+  padding: 5px;
+}
+
+.video {
+  grid-row: 2;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
+.louisview_img {
+  grid-row: 3;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
+.recupable {
+  grid-row: 4;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
+.internship_img {
+  grid-row: 5;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
+.linglong_img {
+  grid-row: 6;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
+.blueocean_img {
+  grid-row: 7;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
+.facebook_img {
+  grid-row: 8;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
+.blueocean_img {
+  grid-row: 9;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
+.eecs183_img {
+  grid-row: 10;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
+.eecs183_img_vid {
+  grid-row: 11;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #818181;
+}
+
 
 /* Resume Page */
 .resume_contain {
@@ -176,6 +319,7 @@ a.skip:focus{
   grid-row: 4 / span 1;
   font-size: 1em;
   margin-bottom: 4%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .skills_subtitle {
@@ -192,6 +336,7 @@ a.skip:focus{
   grid-row: 6 / span 1;
   font-size: 1em;
   margin-bottom: 4%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .experience_subtitle {
@@ -208,6 +353,7 @@ a.skip:focus{
   grid-row: 8 / span 1;
   font-size: 1em;
   margin-bottom: 4%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .leadership_subtitle {
@@ -224,9 +370,10 @@ a.skip:focus{
   grid-row: 10 / span 1;
   font-size: 1em;
   margin-bottom: 2%;
+  font-family: 'Open Sans', sans-serif;
 }
-/* 
-Contact page */
+
+/* Contact page */
 
 .form{
   display: flex;
@@ -252,11 +399,13 @@ Contact page */
   padding: 20px;
   margin-left: 10%;
   margin-right: 10%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .form_fill{
   padding-bottom: 3%;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 *:focus{
@@ -266,39 +415,17 @@ Contact page */
 footer{
   background-color: black;
   color: white;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
+  font-size: 15px;
 }
 
-
-@-webkit-keyframes logo_wiggle{
-  /*Your code here.*/
-  from {
-    width:25px;
-  }
-  to {
-    width:420px;
-  }
+.fixed {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
 }
-
-@keyframes logo_wiggle{
-  /*Your code here.*/
-  from {
-    width:25px;
-  }
-  to {
-    width:420px;
-  }
-
-} 
-
-#logo{
-   /*Your code here.*/
-   animation-name: logo_wiggle;
-   animation-duration: 3s;
-   align-self: center;
-}
-
 
 @media screen and (min-width: 850px){
 
@@ -324,77 +451,102 @@ footer{
     font-size: smaller;
   }
   
+  .resume_contain {
+    display: grid;
+    grid-template-columns: 5vw auto auto 10px;
+    grid-template-rows: 1% auto auto auto auto auto auto auto auto auto auto 6%;
+    grid-row-gap: 15px;
+  }
+
   .education_subtitle {
-    grid-column: 2 / span 1;
+    grid-column: 3 / span 1;
     grid-row: 3 / span 1;
     font-size: 1.5em;
+    margin-right: auto;
+    padding-left: 10vw;
   }
   
   .education_info {
     color: #818181;
     text-align: left;
-    grid-column: 2 / span 3;
+    grid-column: 3 / span 3;
     grid-row: 4 / span 1;
     font-size: 1em;
     margin-bottom: 4%;
+    padding-left: 10vw;
   }
   
   .skills_subtitle {
     text-align: left;
-    grid-column: 5 / span 1;
+    grid-column: 4 / span 1;
     grid-row: 3 / span 1;
     font-size: 1.5em;
+    padding-left: 40vw;
   }
   
   .skills_info {
     color: #818181;
     text-align: left;
-    grid-column: 5 / span 3;
+    grid-column: 4 / span 3;
     grid-row: 4 / span 1;
     font-size: 1em;
     margin-bottom: 4%;
     margin-right: 20%;
+    padding-left: 40vw;
   }
   
   .experience_subtitle {
     text-align: left;
-    grid-column: 2 / span 1;
+    grid-column: 3 / span 1;
     grid-row: 7 / span 1;
     font-size: 1.5em;
+    padding-left: 10vw;
   }
   
   .experience_info {
     color: #818181;
     text-align: left;
-    grid-column: 2 / span 3;
+    grid-column: 3 / span 3;
     grid-row: 8 / span 1;
     font-size: 1em;
     margin-bottom: 4%;
+    padding-left: 10vw;
   }
   
   .leadership_subtitle {
     text-align: left;
-    grid-column: 5 / span 1;
+    grid-column: 4 / span 1;
     grid-row: 7 / span 1;
     font-size: 1.5em;
+    padding-left: 40vw;
   }
   
   .leadership_info {
     color: #818181;
     text-align: left;
-    grid-column: 5 / span 3;
+    grid-column: 4 / span 3;
     grid-row: 8 / span 1;
     font-size: 1em;
     margin-bottom: 2%;
     margin-right: 20%;
+    padding-left: 40vw;
   }
 
+  /* About page */
   .about_contain {
     display: flex;
-    flex-direction: row;
     align-content: center;
     align-items: center;
-  
+  }
+
+  .about_stretch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about_text_stretch {
+    max-width: 350px;
   }
   
   .about_image {
@@ -406,8 +558,94 @@ footer{
   
   .about_title {
     font-size: 2em;
-    padding-right: 20%;
   }
+
+  .resume_footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Work page */
+.work_contain {
+  display: grid;
+  grid-template-columns: auto 25% 25% 25% auto;
+  grid-template-rows: 1fr auto auto auto 1%;
+  grid-row-gap: 15px;
+  grid-gap: 15px;
+}
+
+.video {
+  grid-row: 4;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.louisview_img {
+  grid-row: 4;
+  grid-column: 3;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.recupable {
+  grid-row: 3;
+  grid-column: 4;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.internship_img {
+  grid-row: 3;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.linglong_img {
+  grid-row: 3;
+  grid-column: 3;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.blueocean_img {
+  grid-row: 2;
+  grid-column: 4;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.facebook_img {
+  grid-row: 2;
+  grid-column: 2;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.blueocean_img {
+  grid-row: 2;
+  grid-column: 3;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.eecs183_img {
+  grid-row: 2;
+  grid-column: 4;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.eecs183_img_vid {
+  grid-row: 4;
+  grid-column: 4;
+  margin-bottom: 5px;
+  font-size: medium;
+  padding-bottom: 200px;
+}
 
 }
 
