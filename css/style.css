@@ -402,6 +402,19 @@ a.skip:focus{
   font-family: 'Open Sans', sans-serif;
 }
 
+.pic {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 70%;
+  height: auto;
+  padding: 20px;
+  border: 5px solid black;
+
+}
+
 .form_fill{
   padding-bottom: 20px;
   font-family: 'Open Sans', sans-serif;
