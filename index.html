@@ -13,24 +13,45 @@
   </head>
   <body>
     <a class = "skip" href="#skip">Skip to Main Content</a>
-  <header>
+  <header id="header_height">
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html" class='active-page'>Home</a>
-      <a href="about.html" class='inactive-page'>About</a>
-      <a href="work.html" class='inactive-page'>Experiences</a>
-      <a href="resume.html" class='inactive-page'>Resume</a>
-      <a href="contact.html" class='inactive-page'>Contact</a>
+      <div class = "links">
+        <a href="index.html" class='active-page'>Home</a>
+        <a href="about.html" class='inactive-page'>About</a>
+        <a href="work.html" class='inactive-page'>Experiences</a>
+        <a href="resume.html" class='inactive-page'>Resume</a>
+        <a href="contact.html" class='inactive-page'>Contact</a>
+      </div>
     </div>
     <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
+        if (window.innerWidth > 768 & window.innerWidth < 1024){
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        else if (window.innerWidth > 850) {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        else {
+          document.getElementById("header_height").style.height= "300px";
+        }
       }
       
       function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
+        if ((window.innerWidth > 768) & (window.innerWidth < 1024)){
+          document.getElementsByClassName('mySideNav').style.visibility = 'hidden'; 
+          // document.getElementById("header_height").style.height= "60px";
+          console.log("close");
+        }
+        else if (window.innerWidth > 850) {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        else {
+          document.getElementById("header_height").style.height= "60px";
+        }
       }
       </script>
     <h1 class="name_title">ewelina papiez</h1>

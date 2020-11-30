@@ -43,10 +43,12 @@ header{
   background: #fff;
   border-bottom: 2px solid black;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 .name_title {
+  justify-content: center;
   font-size: 1em;
   order: 1;
 }
@@ -58,18 +60,9 @@ header{
 }
 
 .sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  order: -1;
-  align-items: flex-end;
+  overflow: hidden;
+  width: 100vw;
+  align-items: center;
 }
 
 .sidenav a {
@@ -444,7 +437,38 @@ footer{
 @media screen and (min-width: 850px){
 
 
-  /* Navbar */
+  header{
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+
+  .name_title {
+    justify-content: right;
+    font-size: 1em;
+    order: 1;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    order: -1;
+    align-items: flex-end;
+  }
+
   .picture {
     grid-column: 3 / span 1;
     grid-row: 7 / span 2;
@@ -663,31 +687,28 @@ footer{
 
 }
 
-@media print { 
-  .card {
-    flex-basis: 200px;
-  }
-  /*Your code here again.*/
-  /*You will want four selectors*/  
-  body{
-    background-image: none;
-  }
-
-  .pricing{
-    align-items: flex-start;
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+  
+  header{
     flex-direction: row;
-
+    flex-wrap: wrap-reverse;
   }
 
-  .gallery {
-    display: none;
+  .sidenav {
+    overflow: hidden;
+    flex-direction: row;
   }
 
-  #gallery {
-    display: none;
+  .links {
+    display: flex;
+    flex-direction: row;
   }
 
+  .closebtn {
+    visibility: hidden;
+  }
 }
+
 
 /*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
