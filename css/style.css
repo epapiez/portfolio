@@ -121,8 +121,6 @@ a.skip:focus{
   grid-row-gap: 15px;
 }
 
-
-
 .hello {
   text-align: left;
   grid-column: 2 / span 1;
