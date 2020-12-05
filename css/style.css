@@ -706,10 +706,8 @@ footer{
 }
 
 .flip-card {
-  background-color: transparent;
   width: 350px;
   height: 600px;
-  border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -830,7 +828,7 @@ footer{
 /*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
 @media screen and (prefers-reduced-motion: reduce) {
-  #logo{
+  .parallax{
     /*Your code here.*/
     animation: none;
  }
