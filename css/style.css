@@ -4,9 +4,11 @@ body{
   padding: 0;
   font-size: 16pt; /* test for this! Make all sizes em or rem */
   background-color: aliceblue;
-  min-height: 100%;
+  height: 100%;
 }
-
+html {
+  height: 100%;
+}
 h1{
   font-size: 2em;
   text-align: center;
@@ -118,6 +120,7 @@ a.skip:focus{
   text-align: left;
   grid-column: 2 / span 1;
   grid-row: 6 / span 1;
+  animation: 3s slide-right;
 }
 
 .welcome {
@@ -134,6 +137,56 @@ a.skip:focus{
   height: auto;
   border: 5px solid black;
   padding: 2em;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 700px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  margin-bottom: 100px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: white;
+  color: black;
+  min-height: 100%;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: black;
+  transform: rotateY(180deg);
+  margin-bottom: 100px;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /* About Page */
@@ -163,6 +216,12 @@ a.skip:focus{
 
 .about_title {
   font-size: 2em;
+  animation: 3s slide-right;
+}
+
+.parallax {
+  background-image: none;
+  height: 0%; 
 }
 
 /* Work page */
@@ -294,6 +353,7 @@ a.skip:focus{
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
   font-size: 2em;
+  animation: 3s slide-right;
 }
 
 .education_subtitle {
@@ -434,6 +494,21 @@ footer{
   right: 0;
 }
 
+.a_title {
+  animation: 3s slide-right;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -300%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 850px){
 
 
@@ -487,6 +562,20 @@ footer{
     grid-column: 3 / span 1;
     grid-row: 9 / span 2;
     font-size: smaller;
+  }
+
+  .parallax {
+    /* The image used */
+    background-image: url("../images/IMG_8327.JPG") !important;
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .resume_contain {
@@ -575,6 +664,7 @@ footer{
     display: flex;
     align-content: center;
     align-items: center;
+    height: 10%;
   }
 
   .about_stretch {
@@ -588,10 +678,11 @@ footer{
   }
   
   .about_image {
-    border-image: 5px solid black;
+    /* border-image: 5px solid black;
     max-width: 100%;
     height: auto;
-    margin-top: 1em;
+    margin-top: 1em; */
+    visibility: hidden;
   }
   
   .about_title {
@@ -612,6 +703,14 @@ footer{
   grid-template-rows: 1fr auto auto auto 1%;
   grid-row-gap: 15px;
   grid-gap: 15px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 600px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
 .video {
@@ -699,6 +798,20 @@ footer{
     flex-direction: row;
   }
 
+  .sidenav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+  }
+
+  .name_title {
+    justify-content: center;
+  }
+
+  span {
+    visibility: hidden;
+  }
+
   .links {
     display: flex;
     flex-direction: row;
@@ -707,8 +820,12 @@ footer{
   .closebtn {
     visibility: hidden;
   }
-}
 
+  .parallax {
+    background-image: none;
+    height: 0%; 
+  }
+}
 
 /*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
@@ -718,3 +835,9 @@ footer{
     animation: none;
  }
  }
+
+ @media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RRXXLX26Z8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RRXXLX26Z8');
+</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="images/logo_icon.png"/>
@@ -12,33 +21,55 @@
     <title>About</title>
   </head>
   <body>
-    <header>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="index.html">Home</a>
+    <a class = "skip" href="#skip">Skip to Main Content</a>
+    <header id="header_height">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class = "links">
+          <a href="index.html" class='inactive-page'>Home</a>
           <a href="about.html" class='active-page'>About</a>
-          <a href="work.html">Experiences</a>
-          <a href="resume.html">Resume</a>
-          <a href="contact.html">Contact</a>
+          <a href="work.html" class='inactive-page'>Experiences</a>
+          <a href="resume.html" class='inactive-page'>Resume</a>
+          <a href="contact.html" class='inactive-page'>Contact</a>
         </div>
-        <script>
-          function openNav() {
+      </div>
+      <script>
+        function openNav() {
+          if (window.innerWidth > 768 & window.innerWidth < 1024){
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
           }
-          
-          function closeNav() {
+          else if (window.innerWidth > 850) {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+          else {
+            document.getElementById("header_height").style.height= "300px";
+          }
+        }
+        
+        function closeNav() {
+          if ((window.innerWidth > 768) & (window.innerWidth < 1024)){
+            document.getElementsByClassName('mySideNav').style.visibility = 'hidden'; 
+            // document.getElementById("header_height").style.height= "60px";
+            console.log("close");
+          }
+          else if (window.innerWidth > 850) {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft= "0";
           }
-          </script>
+          else {
+            document.getElementById("header_height").style.height= "60px";
+          }
+        }
+        </script>
         <h1 class="name_title">ewelina papiez</h1>
         <div id="main">
           <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
         </div>
         </div>
-        <a class = "skip" href="#skip">Skip to Main Content</a>
       </header>
+      <div class="parallax"></div>
   <main class="about" id="skip" tabindex="0">
     <div class = "about_contain">
       <h1 class="about_title">about me</h1>
@@ -55,6 +86,7 @@
         </div>
     </div>
   </main>
+  <div class="parallax"></div>
   <footer class = "resume_footer">
     <p class = "footer_home"> Ewelina Papiez ~ epapiez@umich.edu</p>
   </footer>

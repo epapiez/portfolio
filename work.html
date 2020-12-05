@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RRXXLX26Z8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RRXXLX26Z8');
+</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="images/logo_icon.png"/>
@@ -12,37 +21,58 @@
     <title>Experiences</title>
   </head>
   <body>
-    <header>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
+    <a class = "skip" href="#skip">Skip to Main Content</a>
+    <header id="header_height">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class = "links">
+          <a href="index.html" class='inactive-page'>Home</a>
+          <a href="about.html" class='inactive-page'>About</a>
           <a href="work.html" class='active-page'>Experiences</a>
-          <a href="resume.html">Resume</a>
-          <a href="contact.html">Contact</a>
+          <a href="resume.html" class='inactive-page'>Resume</a>
+          <a href="contact.html" class='inactive-page'>Contact</a>
         </div>
+      </div>
         <script>
           function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-          }
-          
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-          }
+        if (window.innerWidth > 768 & window.innerWidth < 1024){
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        else if (window.innerWidth > 850) {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        else {
+          document.getElementById("header_height").style.height= "300px";
+        }
+      }
+      
+      function closeNav() {
+        if ((window.innerWidth > 768) & (window.innerWidth < 1024)){
+          document.getElementsByClassName('mySideNav').style.visibility = 'hidden'; 
+          // document.getElementById("header_height").style.height= "60px";
+          console.log("close");
+        }
+        else if (window.innerWidth > 850) {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        else {
+          document.getElementById("header_height").style.height= "60px";
+        }
+      }
           </script>
         <h1 class="name_title">ewelina papiez</h1>
         <div id="main">
             <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
         </div>
         </div>
-        <a class = "skip" href="#skip">Skip to Main Content</a>
       </header>
       <main class="about" id="skip" tabindex="0">
-      <h1>experiences</h1>
+      <h1 >experiences</h1>
       <div class="work_contain">
-        <figure class="video">
+        <!-- <figure class="video">
           <video class = "resize" controls>
             <source src="images/truckedup (1).mov" alt="Video of a mobile food ordering application">
             <track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
@@ -51,15 +81,181 @@
             bring my team's idea to life. While my team and I created the business plan and pitch deck for our idea together, I took the 
             initiative to create a demo.
           </figcaption>
-        </figure>
-        <figure class="louisview_img">
+        </figure> -->
+        <div class="louisview_img">
+          <div class = "flip-card">
+            <div class = "flip-card-inner">
+              <div class = "flip-card-front">
+                <h2>Software Engineering Internship</h2>
+              </div>
+              <div class = "flip-card-back">
+                <figure>
+                  <img class = "resize" src="images/louisview.jpeg" alt="Image of a computer screen with a web application and a video conferencing tool"/>
+                  <figcaption><b>software engineering internship</b></br>I worked as a software engineering intern during the summer of 2020. Although the internship was remote, I was able to work
+                    with a team of three other interns to create a fully functional application that went into production. Our application, meant to streamline
+                    the document viewing process, ended up winning the intern competition.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recupable">
+          <div class = "flip-card">
+            <div class = "flip-card-inner">
+              <div class = "flip-card-front">
+                <h2>reCUPable</h2>
+              </div>
+              <div class = "flip-card-back">
+                <figure class="recupable">
+                  <img class = "resize" src="images/reCUPable Final Presentation.png" alt="Cover slide for an entrepreneurship pitch"/>
+                  <figcaption><b>starting a business</b></br>During one of my entrepreneurship courses (PSYCH 223: Entrepreneurial Creativity), three of my peers and I created a company
+                    that promoted sustainability. A customer would purchase a resuable cup, and if they used that reusable cup at certain restaurants, they 
+                    would receive a discount. It was essentially a membership service that promoted sustainability. We were able to get several restaurants
+                    on board and actually created the cups. The presentation above actually includes my roommate holding a cup! We created social media, held
+                    events at local establishments, and made a profit. We also made it to the final round of a pitching competition with our company.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="internship_img">
+          <div class = "flip-card">
+            <div class = "flip-card-inner">
+              <div class = "flip-card-front">
+                <h2>Special Projects Internship</h2>
+              </div>
+              <div class = "flip-card-back">
+                <figure>
+                  <img class = "resize" src="images/internship.jpeg" alt="Picture of four women and a man in an office"/>
+                  <figcaption><b>special projects internship</b></br>In the summer of 2019, I intered as a special projects intern on the technology team at Quicken Loans. Here, I directly worked
+                    on Brian Woodring's (pictured) projects. At the time, he was the Chief Technology Officer and currently holds the position of Chief Information
+                    Officer. Throughout the summer, I worked on projects such as the analysis and presentation of survey results and the design of communication
+                    for the CTO. I also participated in Hack Week, where I helped create a mentorship program.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="linglong_img">
+          <div class = "flip-card">
+            <div class = "flip-card-inner">
+              <div class = "flip-card-front">
+                <h2>Special Projects Internship</h2>
+              </div>
+              <div class = "flip-card-back">
+                <figure>
+                  <img class = "resize" src="images/linglong.jpeg" alt="Picture of a group of interns with an executive on a rooftop patio"/>
+                  <figcaption><b>internship connections</b></br>At my summer 2019 internship, I also had the opportunity to make lifelong friends and work with the Chief Information Officer
+                    at the time, Linglong He (pictured). I created a presentation analyzing the results of the quarterly technology employee survey for Linglong after
+                    I first created one for Brian Woodring. The presentation was shown to all technology leadership, including those at the C-level.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blueocean_img">
+          <div class = "flip-card">
+            <div class = "flip-card-inner">
+              <div class = "flip-card-front">
+                <h2>Blue Ocean Entrepreneurship Competition</h2>
+              </div>
+              <div class = "flip-card-back">
+                <figure>
+                  <img class = "resize" src="images/blueocean.jpeg" alt="Logo of an entrepreneurship competition"/>
+                  <figcaption><b>entrepreneurship competition judge</b></br>While taking an entrepreneurship course (ENTR 490: Organizational Management in Startups), I was asked by the instructor
+                    to help judge a highschool entrepreneurship competition. This was a very rewarding experience and I loved seeing the amazing potential
+                    that all submissions had.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class = "facebook_img">
+          <div class = "flip-card">
+            <div class = "flip-card-inner">
+              <div class = "flip-card-front">
+                <h2>Facebook Wayfinder</h2>
+              </div>
+              <div class = "flip-card-back">
+                <figure>
+                  <img class = "resize" src="images/facebook.jpeg" alt="Image of a woman with a laptop"/>
+                  <figcaption><b>facebook wayfinder</b></br>In the summer of 2020, I was invited to attend the Facebook Wayfinder conference.  Wayfinder is a three-day program that helps 
+                    students find their way in the world of tech, design, and engineering. With the "Choose Your Own Adventure" format that the Wayfinder 
+                    team used, I was able to continue working my internship while attending events before or after the workday. My favorite part of this 
+                    experience was being able to speak to Facebook employees 1:1 to ask more personal questions regarding their role, their journey, and their passions.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class = "eecs183_img">
+          <div class = "flip-card">
+            <div class = "flip-card-inner">
+              <div class = "flip-card-front">
+                <h2>Facebook Wayfinder</h2>
+              </div>
+              <div class = "flip-card-back">
+                <figure>
+                  <img class = "resize" src="images/IMG_2436.jpeg" alt="Image of four students with a computer science project"/>
+                  <figcaption><b>programming competition winner</b></br>During my first programming course (EECS 183: Elementary Programming Concepts). My group and I used C++ and Arduino to create 
+                    a video game on an LED screen. We created three interactive levels, and were chosen by the EECS 183 team and J.P. Morgan Chase as the grand prize winners.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class = "eecs183_img_vid">
+          <div class = "flip-card">
+            <div class = "flip-card-inner">
+              <div class = "flip-card-front">
+                <h2>Arduino Project Demo</h2>
+              </div>
+              <div class = "flip-card-back">
+                <figure class = "eecs183_img_vid" alt="Video of a computer science project on an LED screen">
+                  <video class = "resize" controls>
+                    <source src="images/game.mov">
+                    <track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
+                  </video>
+                  <figcaption><b>project demo</b></br>The winning project that my group and I created during the EECS 183 final project showcase.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class = "flip-card">
+            <div class = "flip-card-inner">
+              <div class = "flip-card-front">
+                <h2>Arduino Project Demo</h2>
+              </div>
+              <div class = "flip-card-back">
+                <figure>
+                  <video class = "resize" controls>
+                    <source src="images/truckedup (1).mov" alt="Video of a mobile food ordering application">
+                    <track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
+                  </video>
+                  <figcaption><b>trucked up</b></br>For an entrepreneurship class (ES 212: Entrepreneurial Business Basics), I created a mock application in order to
+                    bring my team's idea to life. While my team and I created the business plan and pitch deck for our idea together, I took the 
+                    initiative to create a demo.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <figure class="louisview_img">
           <img class = "resize" src="images/louisview.jpeg" alt="Image of a computer screen with a web application and a video conferencing tool"/>
           <figcaption><b>software engineering internship</b></br>I worked as a software engineering intern during the summer of 2020. Although the internship was remote, I was able to work
             with a team of three other interns to create a fully functional application that went into production. Our application, meant to streamline
             the document viewing process, ended up winning the intern competition.
           </figcaption>
-        </figure>
-        <figure class="recupable">
+        </figure> -->
+        <!-- <figure class="recupable">
           <img class = "resize" src="images/reCUPable Final Presentation.png" alt="Cover slide for an entrepreneurship pitch"/>
           <figcaption><b>starting a business</b></br>During one of my entrepreneurship courses (PSYCH 223: Entrepreneurial Creativity), three of my peers and I created a company
             that promoted sustainability. A customer would purchase a resuable cup, and if they used that reusable cup at certain restaurants, they 
@@ -67,48 +263,48 @@
             on board and actually created the cups. The presentation above actually includes my roommate holding a cup! We created social media, held
             events at local establishments, and made a profit. We also made it to the final round of a pitching competition with our company.
           </figcaption>
-        </figure>
-        <figure class="internship_img">
+        </figure> -->
+        <!-- <figure class="internship_img">
           <img class = "resize" src="images/internship.jpeg" alt="Picture of four women and a man in an office"/>
           <figcaption><b>special projects internship</b></br>In the summer of 2019, I intered as a special projects intern on the technology team at Quicken Loans. Here, I directly worked
             on Brian Woodring's (pictured) projects. At the time, he was the Chief Technology Officer and currently holds the position of Chief Information
             Officer. Throughout the summer, I worked on projects such as the analysis and presentation of survey results and the design of communication
             for the CTO. I also participated in Hack Week, where I helped create a mentorship program.
           </figcaption>
-        </figure>
-        <figure class="linglong_img">
+        </figure> -->
+        <!-- <figure class="linglong_img">
           <img class = "resize" src="images/linglong.jpeg" alt="Picture of a group of interns with an executive on a rooftop patio"/>
           <figcaption><b>internship connections</b></br>At my summer 2019 internship, I also had the opportunity to make lifelong friends and work with the Chief Information Officer
             at the time, Linglong He (pictured). I created a presentation analyzing the results of the quarterly technology employee survey for Linglong after
             I first created one for Brian Woodring. The presentation was shown to all technology leadership, including those at the C-level.
           </figcaption>
-        </figure>
-        <figure class="blueocean_img">
+        </figure> -->
+        <!-- <figure class="blueocean_img">
           <img class = "resize" src="images/blueocean.jpeg" alt="Logo of an entrepreneurship competition"/>
           <figcaption><b>entrepreneurship competition judge</b></br>While taking an entrepreneurship course (ENTR 490: Organizational Management in Startups), I was asked by the instructor
             to help judge a highschool entrepreneurship competition. This was a very rewarding experience and I loved seeing the amazing potential
             that all submissions had.
           </figcaption>
-        </figure>
-        <figure class = "facebook_img">
+        </figure> -->
+        <!-- <figure class = "facebook_img">
           <img class = "resize" src="images/facebook.jpeg" alt="Image of a woman with a laptop"/>
           <figcaption><b>facebook wayfinder</b></br>In the summer of 2020, I was invited to attend the Facebook Wayfinder conference.  Wayfinder is a three-day program that helps 
             students find their way in the world of tech, design, and engineering. With the "Choose Your Own Adventure" format that the Wayfinder 
             team used, I was able to continue working my internship while attending events before or after the workday. My favorite part of this 
             experience was being able to speak to Facebook employees 1:1 to ask more personal questions regarding their role, their journey, and their passions.</figcaption>
-        </figure>
-        <figure class = "eecs183_img">
+        </figure> -->
+        <!-- <figure class = "eecs183_img">
           <img class = "resize" src="images/IMG_2436.jpeg" alt="Image of four students with a computer science project"/>
           <figcaption><b>programming competition winner</b></br>During my first programming course (EECS 183: Elementary Programming Concepts). My group and I used C++ and Arduino to create 
             a video game on an LED screen. We created three interactive levels, and were chosen by the EECS 183 team and J.P. Morgan Chase as the grand prize winners.</figcaption>
-        </figure>
-        <figure class = "eecs183_img_vid" alt="Video of a computer science project on an LED screen">
+        </figure> -->
+        <!-- <figure class = "eecs183_img_vid" alt="Video of a computer science project on an LED screen">
           <video class = "resize" controls>
             <source src="images/game.mov">
             <track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
           </video>
           <figcaption><b>project demo</b></br>The winning project that my group and I created during the EECS 183 final project showcase.</figcaption>
-        </figure>
+        </figure> -->
       </div>
       </main>
     <footer>
