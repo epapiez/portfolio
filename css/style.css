@@ -128,6 +128,7 @@ a.skip:focus{
   grid-column: 2 / span 1;
   grid-row: 9 / span 2;
   font-size: smaller;
+  margin-bottom: 200px;
 }
 
 .picture {
@@ -240,9 +241,9 @@ a.skip:focus{
 }
 
 .video {
-  grid-row: 2;
+  grid-row: 11;
   grid-column: 2;
-  margin-bottom: 5px;
+  margin-bottom: 300px;
   font-size: medium;
   margin-left: 10px;
   margin-right: 10px;
@@ -320,7 +321,7 @@ a.skip:focus{
 }
 
 .eecs183_img {
-  grid-row: 10;
+  grid-row: 2;
   grid-column: 2;
   margin-bottom: 5px;
   font-size: medium;
@@ -330,7 +331,7 @@ a.skip:focus{
 }
 
 .eecs183_img_vid {
-  grid-row: 11;
+  grid-row: 10;
   grid-column: 2;
   margin-bottom: 5px;
   font-size: medium;
@@ -498,6 +499,77 @@ footer{
   animation: 3s slide-right;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px double #696969;
+}
+
+.tooltiptop {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px double #696969;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltiptop .tooltiptexttop {	
+  visibility: hidden;	
+  width: 300px;	
+  background-color: black;	
+  color: #fff;	
+  text-align: center;	
+  border-radius: 6px;	
+  padding: 5px 0;	
+  position: absolute;	
+  z-index: 1;	
+  bottom: 150%;	
+  left: 50%;	
+  margin-left: -60px;	
+}	
+.tooltiptop .tooltiptexttop::after {	
+  content: "";	
+  position: absolute;	
+  top: 100%;	
+  left: 50%;	
+  margin-left: -5px;	
+  border-width: 5px;	
+  border-style: solid;	
+  border-color: black transparent transparent transparent;	
+}
+
+.tooltiptop:hover .tooltiptexttop {
+  visibility: visible;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 @keyframes slide-right {
   from {
     margin-left: -300%;
@@ -507,6 +579,207 @@ footer{
     margin-left: 0%;
     width: 100%;
   }
+}
+
+@media screen and (min-width: 1398px) {
+  .work_contain {
+    display: grid;
+    grid-template-columns: auto 25% 25% 25% auto;
+    grid-template-rows: 1fr auto auto auto 1%;
+    grid-row-gap: 15px;
+    grid-gap: 15px;
+  }
+  
+  .flip-card {
+    width: 350px;
+    height: 600px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  .video {
+    grid-row: 4;
+    grid-column: 2;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .louisview_img {
+    grid-row: 4;
+    grid-column: 3;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .recupable {
+    grid-row: 3;
+    grid-column: 4;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .internship_img {
+    grid-row: 3;
+    grid-column: 2;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .linglong_img {
+    grid-row: 3;
+    grid-column: 3;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .blueocean_img {
+    grid-row: 2;
+    grid-column: 4;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .facebook_img {
+    grid-row: 2;
+    grid-column: 2;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .blueocean_img {
+    grid-row: 2;
+    grid-column: 3;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .eecs183_img {
+    grid-row: 2;
+    grid-column: 4;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .eecs183_img_vid {
+    grid-row: 4;
+    grid-column: 4;
+    margin-bottom: 5px;
+    font-size: medium;
+    padding-bottom: 200px;
+  }
+
+  header{
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+
+  .name_title {
+    justify-content: right;
+    font-size: 1em;
+    order: 1;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    order: -1;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1397px) {
+  .work_contain {
+    display: grid;
+    grid-template-columns: auto 40% 40% auto;
+    grid-template-rows: auto auto auto auto auto 1%;
+    grid-row-gap: 15px;
+    grid-gap: 15px;
+  }
+  
+  .flip-card {
+    width: 350px;
+    height: 600px;
+    perspective: 1000px; 
+  }
+  
+  .video {
+    grid-row: 5;
+    grid-column: 2;
+    margin-bottom: 5px;
+    font-size: medium;
+    margin-bottom: 400px;
+  }
+  
+  .louisview_img {
+    grid-row: 4;
+    grid-column: 3;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .recupable {
+    grid-row: 2;
+    grid-column: 2;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .internship_img {
+    grid-row: 2;
+    grid-column: 3;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .linglong_img {
+    grid-row: 3;
+    grid-column: 2;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .facebook_img {
+    grid-row: 3;
+    grid-column: 3;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .blueocean_img {
+    grid-row: 1;
+    grid-column: 3;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .eecs183_img {
+    grid-row: 4;
+    grid-column: 2;
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  
+  .eecs183_img_vid {
+    grid-row: 1;
+    grid-column: 2;
+    margin-bottom: 5px;
+    font-size: medium;
+    padding-bottom: 100px;
+  }
+
 }
 
 @media screen and (min-width: 850px){
@@ -678,10 +951,6 @@ footer{
   }
   
   .about_image {
-    /* border-image: 5px solid black;
-    max-width: 100%;
-    height: auto;
-    margin-top: 1em; */
     visibility: hidden;
   }
   
@@ -695,92 +964,6 @@ footer{
     bottom: 0;
     right: 0;
   }
-
-  /* Work page */
-.work_contain {
-  display: grid;
-  grid-template-columns: auto 25% 25% 25% auto;
-  grid-template-rows: 1fr auto auto auto 1%;
-  grid-row-gap: 15px;
-  grid-gap: 15px;
-}
-
-.flip-card {
-  width: 350px;
-  height: 600px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-.video {
-  grid-row: 4;
-  grid-column: 2;
-  margin-bottom: 5px;
-  font-size: medium;
-}
-
-.louisview_img {
-  grid-row: 4;
-  grid-column: 3;
-  margin-bottom: 5px;
-  font-size: medium;
-}
-
-.recupable {
-  grid-row: 3;
-  grid-column: 4;
-  margin-bottom: 5px;
-  font-size: medium;
-}
-
-.internship_img {
-  grid-row: 3;
-  grid-column: 2;
-  margin-bottom: 5px;
-  font-size: medium;
-}
-
-.linglong_img {
-  grid-row: 3;
-  grid-column: 3;
-  margin-bottom: 5px;
-  font-size: medium;
-}
-
-.blueocean_img {
-  grid-row: 2;
-  grid-column: 4;
-  margin-bottom: 5px;
-  font-size: medium;
-}
-
-.facebook_img {
-  grid-row: 2;
-  grid-column: 2;
-  margin-bottom: 5px;
-  font-size: medium;
-}
-
-.blueocean_img {
-  grid-row: 2;
-  grid-column: 3;
-  margin-bottom: 5px;
-  font-size: medium;
-}
-
-.eecs183_img {
-  grid-row: 2;
-  grid-column: 4;
-  margin-bottom: 5px;
-  font-size: medium;
-}
-
-.eecs183_img_vid {
-  grid-row: 4;
-  grid-column: 4;
-  margin-bottom: 5px;
-  font-size: medium;
-  padding-bottom: 200px;
-}
 
 }
 

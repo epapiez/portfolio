@@ -21,26 +21,47 @@
     <title>Resume</title>
   </head>
   <body>
-    <header>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="work.html">Experiences</a>
+    <header id="header_height">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class = "links">
+          <a href="index.html" class='inactive-page'>Home</a>
+          <a href="about.html" class='inactive-page'>About</a>
+          <a href="work.html" class='inactive-page'>Experiences</a>
           <a href="resume.html" class='active-page'>Resume</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html" class='inactive-page'>Contact</a>
         </div>
-        <script>
-          function openNav() {
+      </div>
+      <script>
+        function openNav() {
+          if (window.innerWidth > 768 & window.innerWidth < 1024){
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
           }
-          
-          function closeNav() {
+          else if (window.innerWidth > 850) {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+          else {
+            document.getElementById("header_height").style.height= "300px";
+          }
+        }
+        
+        function closeNav() {
+          if ((window.innerWidth > 768) & (window.innerWidth < 1024)){
+            document.getElementsByClassName('mySideNav').style.visibility = 'hidden'; 
+            // document.getElementById("header_height").style.height= "60px";
+            console.log("close");
+          }
+          else if (window.innerWidth > 850) {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft= "0";
           }
-          </script>
+          else {
+            document.getElementById("header_height").style.height= "60px";
+          }
+        }
+        </script>
         <h1 class="name_title">ewelina papiez</h1>
         <div id="main">
           <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
@@ -51,37 +72,51 @@
         <h1 class="a_title">resume</h1>
       <div class="resume_contain">
         <div class = "education_subtitle">education</div>
-        <div class = "education_info"><b>University of Michigan School of Information</b>
-          <br/> Bachelor of Science in Information
-          <br/> Focus in Information Analysis
-          <br/> Class of 2022
+        <div class = "education_info"><div class="tooltip"><b>University of Michigan School of Information</b><span class="tooltiptext">I attend the University of Michigan - Ann Arbor where I am enrolled in the School of Information. I am triple-minoring in Polish, Entrepreneurship, and Science, Technology, & Society.</span></div>
+          <br/> <div class="tooltip">Bachelor of Science in Information <span class="tooltiptext">This richly interdisciplinary program is not just about tech and coding or just about people and how they tick. BSI graduates leave the program understanding both how to create data and technology and how to make them work for real people, skills hotly in demand in today’s job market.</span></div>
+          <br/> <div class="tooltip">Focus in Information Analysis<span class="tooltiptext">In this concentration, I complete courses that teach me to identify and ask questions that matter to stakeholders, gather essential data to answer the questions, find answers that are grounded in empirical evidence and present those answers in a convincing way.</span></div>
+          <br/> <div class="tooltip">Class of 2022<span class="tooltiptext">I will be graduating with a Bachelor of Science in May 2022.</span></div>
         </div>
         <div class = "skills_subtitle">skills</div>
         <div class = "skills_info">
-          C++, Python, Git, GitHub, Angular, HTML, SQL/XML, rST, R, MATLAB, Adobe Photoshop, Adobe Illustrator
+          <div class="tooltip">C++,<span class="tooltiptext">I heavily used C++ in a course in which I won a competition sponsored by J.P. Morgan Chase.</span></div> 
+          <div class="tooltip">Python,<span class="tooltiptext">Python is the main programming language used within the School of Information. I have used it in my Instructional Aide position, as well as in several courses.</span></div> 
+          <div class="tooltip">Git, GitHub,<span class="tooltiptext">I have used Git and GitHub in a professional setting during my internship and research position, in several courses, and in my Instructional Aide position.</span></div>  
+          <div class="tooltip">Angular,<span class="tooltiptext">I used Angular to create an internal web application during my internship, with which I won the software engineering internship competition.</span></div>  
+          <div class="tooltip">HTML,<span class="tooltiptext">I used Angular to create an internal web application during my internship, with which I won the software engineering internship competition.</span></div>  
+          <div class="tooltip">SQL,<span class="tooltiptext">In my Data Manipulation course, I grasped a proficient understanding in SQL and PostgreSQL.</span></div>  
+          <div class="tooltip">rST,<span class="tooltiptext">I used rST in my research position, where I created an interactive ebook.</span></div>  
+          <div class="tooltip">R,<span class="tooltiptext">I used R during labs in my Introduction to Statistics and Data Analysis course.</span></div>  
+          <div class="tooltip">MATLAB,<span class="tooltiptext">I took a Coursera course on MATLAB, sponsored by Vanderbilt University.</span></div>  
+          <div class="tooltip">Adobe Photoshop,Adobe Illustrator<span class="tooltiptext">I used Adobe Photoshop and Illustrator in my Special Projects internship and in my position as Design Editor of my high school's yearbook.</span></div>  
         </div>
         <div class = "experience_subtitle">experience</div>
-        <div class = "experience_info"><b>University of Michigan School of Information</b>
-          <br/> Data-Oriented Programming Instructional Aide
+        <div class = "experience_info">
+          <div class="tooltiptop"><b>University of Michigan School of Information</b><span class="tooltiptexttop">August 2020-present</span></div> 
+          <br/> <div class="tooltiptop">Data-Oriented Programming Instructional Aide<span class="tooltiptexttop">Assists in the instruction of Data-Oriented Programming, a course at the School of Information that has over 100 students per term. Grades weekly programming assignments, holds office hour sessions, and helps to led discussion sections for more individualized instruction. Responsible for weekly answering of questions on Piazza, a question-asking forum for students. Attends weekly instructional team meetings.</span></div>
           <br/> 
-          <br/> <b>Quicken Loans</b>
-          <br/> Software Engineering Intern
+          <br/> <div class="tooltiptop"><b>Quicken Loans</b><span class="tooltiptexttop">June 2020-August 2020</span></div>
+          <br/> <div class="tooltiptop">Software Engineering Intern<span class="tooltiptexttop">Worked with a group of three other interns to improve the interface that bankers view documents on as part of an intern competition.
+            Learned to use primarily Angular and Adobe XD to lead the UI design of intern project, which was ultimately chosen as the winning project.</span></div>
           <br/> 
-          <br/> <b>University of Michigan School of Information</b>
-          <br/> Research Assistant
+          <br/> <div class="tooltiptop"><b>University of Michigan School of Information</b><span class="tooltiptexttop">November 2019-July 2020</span></div>
+          <br/> <div class="tooltiptop">Research Assistant<span class="tooltiptexttop">Wrote an open-source interactive ebook to teach C++ and Python to students, especially focusing on the University of Michigan's School of Engineering and School of Information introductory programming courses. Used reStructuredText to create interactive questions, including Parson's Problems, drag-and-drop, and live-code. The open-source ebooks are meant to democratize the learning of computer science and make it accessible to all.</span></div>
           <br/> 
-          <br/> <b>Quicken Loans</b>
-          <br/> Special Projects Intern
+          <br/> <div class="tooltiptop"><b>Quicken Loans</b><span class="tooltiptexttop">May 2019-August 2019</span></div>
+          <br/> <div class="tooltiptop">Special Projects Intern<span class="tooltiptexttop">Worked on a variety of projects surrounding the technology team which strengthened data analysis, graphic design, and Microsoft Office skills.
+            Participated as a contributor to the Convoyage project, which helped streamline the conference registration process for team members at Quicken Loans through an easily accessible website.
+            Co-lead a HackWeek team, creating an app using PHP with a MySQL backend to simplify equipment rental.</span></div>
         </div> 
         <div class = "leadership_subtitle">leadership</div>
-        <div class = "leadership_info"><b>Panhellenic Association</b>
-          <br/> Vice President of Internal Affairs/Executive Board
+        <div class = "leadership_info">
+          <div class="tooltiptop"><b>Panhellenic Association</b><span class="tooltiptexttop">November 2019-present</span></div>
+          <br/> <div class="tooltiptop">Vice President of Internal Affairs/Executive Board<span class="tooltiptexttop">Responsible for the "behind-the-scenes" operations of the Panhellenic Association, the largest all-female student organization on the University of Michigan's campus, composed of over 3,000 women. Prepares agendas and minutes, sets up speakers and the schedule for weekly meetings, trains 18 Panhellenic delegates, judges submissions for Fraternity-Sorority Life awards, and organized Month of the Scholar and the incoming Panhellenic executive board elections. Works with a ten-person executive board to ensure the smooth running of the Panhellenic Association.</span></div>
           <br/> 
-          <br/> <b>Kappa Delta Sorority</b>
-          <br/> Panhellenic Delegate/Executive Board
+          <br/> <div class="tooltiptop"><b>Kappa Delta Sorority</b><span class="tooltiptexttop">January 2019-December 2019</span></div>
+          <br/> <div class="tooltiptop">Panhellenic Delegate/Executive Board<span class="tooltiptexttop">Acted as a liaison between the Sigma Zeta chapter of Kappa Delta and the Panhellenic community at the University of Michigan. Perfected public speaking, communication, and teamwork.</span></div>
           <br/> 
-          <br/> <b>Mosher-Jordan Hall Council</b>
-          <br/> President
+          <br/> <div class="tooltiptop"><b>Mosher-Jordan Hall Council</b><span class="tooltiptexttop">January 2019-December 2019</span></div>
+          <br/> <div class="tooltiptop">President<span class="tooltiptexttop">Led weekly meetings, planned team-building activities, and oversaw the execution of over ten community events.</span></div>
         </div>
         
         

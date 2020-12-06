@@ -21,34 +21,56 @@
     <title>Contact</title>
   </head>
   <body>
-    <header>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="work.html">Experiences</a>
-          <a href="resume.html">Resume</a>
+    <a class = "skip" href="#skip">Skip to Main Content</a>
+    <header id="header_height">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class = "links">
+          <a href="index.html" class='inactive-page'>Home</a>
+          <a href="about.html" class='inactive-page'>About</a>
+          <a href="work.html" class='inactive-page'>Experiences</a>
+          <a href="resume.html" class='inactive-page'>Resume</a>
           <a href="contact.html" class='active-page'>Contact</a>
         </div>
-        <script>
-          function openNav() {
+      </div>
+      <script>
+        function openNav() {
+          if (window.innerWidth > 768 & window.innerWidth < 1024){
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
           }
-          
-          function closeNav() {
+          else if (window.innerWidth > 850) {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+          else {
+            document.getElementById("header_height").style.height= "300px";
+          }
+        }
+        
+        function closeNav() {
+          if ((window.innerWidth > 768) & (window.innerWidth < 1024)){
+            document.getElementsByClassName('mySideNav').style.visibility = 'hidden'; 
+            // document.getElementById("header_height").style.height= "60px";
+            console.log("close");
+          }
+          else if (window.innerWidth > 850) {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft= "0";
           }
-          </script>
+          else {
+            document.getElementById("header_height").style.height= "60px";
+          }
+        }
+        </script>
         <h1 class="name_title">ewelina papiez</h1>
         <div id="main">
-            <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+          <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
         </div>
         </div>
-        <a class = "skip" href="#skip">Skip to Main Content</a>
       </header>
   <main class="about" id="skip" tabindex="0">
+    <div class="parallax"></div>
     <h1 class="a_title">contact</h1>
       <img class="pic" src="images/IMG_2624.jpeg" alt="Girl with sunglasses"/>
   <div class = "form"> 
@@ -75,7 +97,8 @@
     <div>on <a href = "https://github.com/epapiez">GitHub</a></div>
     <div>at epapiez@umich.edu</div>
   </div>
-      </main>
+  <div class="parallax"></div>
+  </main>
   </body>
   <footer class = "resume_footer">
     <p> Ewelina Papiez ~ epapiez@umich.edu</p>
