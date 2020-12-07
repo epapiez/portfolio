@@ -469,6 +469,10 @@ a.skip:focus{
   font-family: 'Open Sans', sans-serif;
 }
 
+.contact_text {
+  text-align: center;
+}
+
 .pic {
   display: flex;
   flex-direction: column;
@@ -847,6 +851,7 @@ footer{
 
   .hello{
     grid-row: 7 / span 2;
+    animation: 3s slide-right;
   }
   
   .welcome {
@@ -989,6 +994,7 @@ footer{
   
   .about_title {
     font-size: 2em;
+    animation: 3s slide-right;
   }
 
   .resume_footer {
@@ -1256,8 +1262,15 @@ footer{
 @media screen and (prefers-reduced-motion: reduce) {
  .a_title {
   animation: none;
+  }
+  .about_title {
+    animation: none;
+  }
+
+  .hello {
+    animation: none;
+  }
 }
- }
 
  @media only screen and (max-device-width: 1366px) {
   .parallax {
