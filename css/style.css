@@ -1,8 +1,8 @@
 body{
-  font-family: 'Quantico', sans-serif; /* Test for this*/
+  font-family: 'Quantico', sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 16pt; /* test for this! Make all sizes em or rem */
+  font-size: 16pt; 
   background-color: aliceblue;
   height: 100%;
 }
@@ -159,7 +159,10 @@ a.skip:focus{
 }
 
 
-.flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner, 
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -1257,8 +1260,6 @@ footer{
 
 }
 
-/*Your code here again.*/ 
-/*Add media query to handle reduced-motion*/
 @media screen and (prefers-reduced-motion: reduce) {
  .a_title {
   animation: none;
